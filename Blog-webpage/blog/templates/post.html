@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ post.name }}</h1>
+    <p><strong>Author:</strong> {{ post.author }}</p>
+    <p><strong>Published Date:</strong> {{ post.created_at  }}</p>
+    <div>
+        <p>{{ post.content }}</p>
+    </div>
+    <Button><a href="{% url 'homepage' %}">Back to homepage</a></Button>
+    </body>
+</html>

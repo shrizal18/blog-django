@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Homepage</title>
+</head>
+<body>
+    <h1>Recent Blog Posts</h1>
+    <ul>
+         {% for post in posts %} 
+            <li>
+             <h2> <a href="{% url 'post' post.id %}">  {{ post.name }} </a></h2><br>
+             <p> {{post.description}}</p>
+            </li>
+        {% empty %}
+            <li>No posts available .</li>
+        {% endfor %} 
+    </ul>
+</body>
+</html>
